@@ -1,0 +1,10 @@
+HACER-SENCILLO(m)
+    monedas = [25, 10, 5, 1]
+    resultado =  []
+
+    para c/moneda en monedas:
+        cantidad = m / moneda
+        agregar (moneda, cantidad) -> resultado
+        m = m mod moneda
+
+    return resultado
