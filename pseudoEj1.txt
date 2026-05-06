@@ -8,3 +8,5 @@ HACER-SENCILLO(m)
         m = m mod moneda
 
     return resultado
+
+    
