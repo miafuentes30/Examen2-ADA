@@ -27,3 +27,6 @@ Q0.10 : 1
 Q0.05 : 1
 Q0.01 : 1
 Total: 8 monedas
+
+
+## Ejercicio 2
