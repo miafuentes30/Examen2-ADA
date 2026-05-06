@@ -32,15 +32,41 @@ def hacer_sencillo(monto_centavos):
     return resultado
 
 
+
+
+def mostrar_resultado(monto_original, resultado):
+    total_monedas = 0
+
+    print("Monto:", monto_original)
+    print("Desglose de monedas:")
+
+    for moneda, cantidad in resultado:
+        total_monedas += cantidad
+
+        if moneda == 25:
+            nombre = "Q0.25"
+        elif moneda == 10:
+            nombre = "Q0.10"
+        elif moneda == 5:
+            nombre = "Q0.05"
+        else:
+            nombre = "Q0.01"
+
+        print(nombre, ":", cantidad)
+
+    print("Cantidad total de monedas:", total_monedas)
+
+
 def main():
-    monto = input("Ingrese el monto en quetzales. Ejemplo 2.93: ")
+    monto = input("Ingrese el monto en quetzales. (Ej. 1.01): ")
 
     monto_centavos = convertir_a_centavos(monto)
-    #print(monto_centavos)
+    print("Total centavos: ", monto_centavos, "\n")
     
     resultado = hacer_sencillo(monto_centavos)
-    print(resultado)
+    print("Listas configuradas: ", resultado, "\n")
     
+    mostrar_resultado(monto, resultado)
 
 
 if __name__ == "__main__":
