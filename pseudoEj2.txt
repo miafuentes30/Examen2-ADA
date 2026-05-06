@@ -1,0 +1,28 @@
+
+KNAPSACK-FRACCIONADO(articulos, W)
+    para c/articulo i en articulos:
+        articulo.ratio = articulo.precio / articulo.peso
+
+    ordenar articulos de mayor a menor segun articulo.ratio
+
+    valor_total = 0
+    solucion = []
+    capacidad_restante = W
+
+    para cada articulo en articulos:
+        si capacidad_restante == 0:
+            terminar
+
+        cantidad = minimo(articulo.peso, capacidad_restante)
+
+        valor_obtenido = cantidad * articulo.ratio
+        valor_total = valor_total + valor_obtenido
+
+        agregar (articulo.nombre, cantidad, valor_obtenido) -> solucion
+
+        capacidad_restante = capacidad_restante - cantidad
+
+    return solucion, valor_total
+
+
+
