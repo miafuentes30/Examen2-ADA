@@ -1,6 +1,7 @@
 # Examen2-ADA
 
-## Pruebas ejercicio 1:
+## Pruebas ejercicio 1
+python ej1.py
 Caso 1:
 Entrada: 2.93
 Salida:
@@ -30,3 +31,9 @@ Total: 8 monedas
 
 
 ## Ejercicio 2
+python ej2.py
+Ya los inluye 
+
+## Ejercicio 3
+python ej3.py
+Tambien los incluye

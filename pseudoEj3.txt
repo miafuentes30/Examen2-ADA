@@ -1,0 +1,32 @@
+CONTAR-COMBINACIONES(n)
+    movimientos[0] = [0, 8]
+    movimientos[1] = [1, 2, 4]
+    movimientos[2] = [1, 2, 3, 5]
+    movimientos[3] = [2, 3, 6]
+    movimientos[4] = [1, 4, 5, 7]
+    movimientos[5] = [2, 4, 5, 6, 8]
+    movimientos[6] = [3, 5, 6, 9]
+    movimientos[7] = [4, 7, 8]
+    movimientos[8] = [0, 5, 7, 8, 9]
+    movimientos[9] = [6, 8, 9]
+
+    dp = arreglo de tamaño 10 con valores 1
+
+    para longitud desde 2 hasta n:
+        nuevo = arreglo de tamaño 10 con valores 0
+
+        para digito desde 0 hasta 9:
+            para anterior en movimientos[digito]:
+                nuevo[digito] = nuevo[digito] + dp[anterior]
+
+        dp = nuevo
+
+    total = 0
+
+    para digito desde 0 hasta 9:
+        total = total + dp[digito]
+
+    retornar total
+
+
+    
